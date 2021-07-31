@@ -31,3 +31,22 @@
 
 en:
   hello: "Hello world"
+
+  faker:
+    job:
+      specialty:
+        - PT
+        - Cardio
+        - GP
+        - Pediatrics
+
+      doc_type:
+        - lic
+        - education
+        - degree
+
+      practice:
+        - PT
+        - Family
+        - Surgery
+
