@@ -1,0 +1,18 @@
+<body>
+<h1>All Clinicians:</h1>
+
+  <section id="clinician-list">
+    <% @clinicians.each do |clinician| %>
+      <div id="clinician-<%= clinician.id %>">
+        <p> Name: <%= link_to "#{clinician.name}", clinician_path(clinician.id) %></p>
+        <p> Specialty: <%= clinician.specialty %></p>
+        <% clinician.locations.each do |location| %>
+          <%= link_to "#{location.name}", location_path(location.id) %>
+          <br>
+        <% end %>
+        <hr>
+      </div>
+    <% end %>
+  </section>
+
+</body>

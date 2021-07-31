@@ -5,7 +5,6 @@ RSpec.describe 'Welcome page' do
     describe 'when I visit the page' do
       it 'has links to the clinician and location index pages' do
         visit '/'
-        save_and_open_page
 
         expect(page).to have_link('Clinicians')
         expect(page).to have_link('Locations')
