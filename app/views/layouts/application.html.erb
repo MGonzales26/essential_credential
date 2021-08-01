@@ -9,6 +9,17 @@
     <%= javascript_pack_tag 'application' %>
   </head>
 
+  <header>
+    <div class="nav-bar">
+      <p>
+        <%= link_to "Home", "/" %>
+        <%= link_to "Locations", locations_path %>
+        <%= link_to "Clinicians", clinicians_path %>
+        <%= link_to "Documents"  %>
+      </p>
+    </div>
+  </header>
+
   <body>
     <%= yield %>
   </body>

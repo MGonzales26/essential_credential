@@ -6,8 +6,10 @@ RSpec.describe 'Welcome page' do
       it 'has links to the clinician and location index pages' do
         visit '/'
 
-        expect(page).to have_link('Clinicians')
-        expect(page).to have_link('Locations')
+        within("#links") do
+          expect(page).to have_link('Clinicians')
+          expect(page).to have_link('Locations')
+        end
       end
     end
 
@@ -15,9 +17,10 @@ RSpec.describe 'Welcome page' do
       it 'takes me to the clinician index page' do
         visit '/'
   
-        click_link('Clinicians')
-  
-        expect(current_path).to eq(clinicians_path)
+        within("#links") do
+          click_link('Clinicians')
+          expect(current_path).to eq(clinicians_path)
+        end
       end
     end
 
@@ -25,9 +28,10 @@ RSpec.describe 'Welcome page' do
       it 'takes me to the location index page' do
         visit '/'
   
-        click_link('Locations')
-  
-        expect(current_path).to eq(locations_path)
+        within("#links") do
+          click_link('Locations')
+          expect(current_path).to eq(locations_path)
+        end
       end
     end
   end
