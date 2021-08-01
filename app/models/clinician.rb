@@ -8,6 +8,7 @@ class Clinician < ApplicationRecord
   end
 
   def valid_documents
-    Clinician.find_by_sql("SELECT * FROM documents WHERE expiration > (SELECT CURRENT_DATE);")
+    Clinician.find_by_sql("SELECT * FROM documents WHERE expiration > (SELECT CURRENT_DATE)
+    AND clinician_id=#{self.id};")
   end
 end
