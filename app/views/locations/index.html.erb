@@ -1,0 +1,14 @@
+<body>
+  <h1>Your Locations</h1>
+
+  <section id="location-list">
+    <% @locations.each do |loc| %>
+      <div id="location-<%= loc.id %>">
+        <p> Name: <%= link_to "#{loc.name}", location_path(loc.id) %> </p>
+        <p> Practice: <%= loc.practice %> </p>
+        <p> Address: <%= loc.address %> </p>
+        <hr>
+      </div>
+    <% end %>
+  </section>
+</body>
