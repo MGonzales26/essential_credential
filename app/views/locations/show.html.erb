@@ -1,0 +1,16 @@
+<body>
+  <h1>Location Profile</h1>
+
+  <section id="location-profile">
+    <h2> Name: <%= @location.name %> </h2>
+    <h4> Practice: <%= @location.practice %> </h4>
+    <p> Address: <%= @location.address %> </p>
+  </section>
+
+  <section id="location-clinician-list">
+    <h2> Approved Clinicians:</h2>
+    <% @location.clinicians.each do |clinician| %>
+      <p> <%= link_to "#{clinician.name}", clinician_path(clinician.id) %> </p>
+    <% end %>
+  </section>
+</body>

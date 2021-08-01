@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'location show page' do
+RSpec.describe 'location index page' do
   describe 'as a user' do
     before(:each) do
       @location1 = Location.create!(
@@ -64,7 +64,6 @@ RSpec.describe 'location show page' do
           click_link(@location2.name)
           expect(current_path).to eq(location_path(@location2.id))
         end
-        save_and_open_page
       end
     end
   end
