@@ -1,0 +1,28 @@
+<body>
+  <h1>Clinician Profile</h1>
+
+  <section id="clinician-<% @clinician.id %>-profile">
+    <p> Name: <%= @clinician.name %></p>
+    <p> Specialty: <%= @clinician.specialty %></p>
+  </section>
+
+  <section id="clinician-<% @clinician.id %>-locations">
+    <h2>Approved Locations:</h2>
+    <% @clinician.location_names.each do |name| %>
+      <p> <%= name %> </p>
+    <% end %>
+  </section>
+
+  <section id="clinician-<% @clinician.id %>-documents">
+    <h2>Valid Documents:</h2>
+    <% @clinician.valid_documents.each do |doc| %>
+      <p>
+        <%= link_to doc.doc_type, document_path(doc.id) %>
+      </p>
+      <p>
+        expiration: <%= doc.expiration %>
+      </p>
+      <hr>
+    <% end %>
+  </section>
+</body>
