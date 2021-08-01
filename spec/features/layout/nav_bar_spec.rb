@@ -29,7 +29,7 @@ RSpec.describe 'Nav bar links' do
       expect(page).to have_link("Documents")
     end
 
-    xit 'shows a link to the locations, clinicians documents and home' do
+    it 'shows a link to the locations, clinicians documents and home' do
       visit documents_path
 
       expect(page).to have_link("Home")

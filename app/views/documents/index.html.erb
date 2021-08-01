@@ -1,0 +1,14 @@
+<body>
+  <h1>All Valid Documents</h1>
+
+  <section id="documents-list">
+    <% @documents.each do |doc| %>
+      <div id="document-<%= doc.id %>">
+        <p> Type: <%= doc.doc_type %></p>
+        <p> Expiration: <%= doc.expiration %></p>
+        <%= button_to "Visit Document Page", document_path(doc), method: :get %>
+      </div>
+      <hr>
+    <% end %>
+  </section>
+</body>

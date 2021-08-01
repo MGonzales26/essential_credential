@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   resources :clinicians, only: [:index, :show]
   resources :locations, only: [:index, :show]
-  resources :documents, only: [:show]
+  resources :documents, only: [:index, :show]
 end
