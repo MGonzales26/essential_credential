@@ -5,6 +5,6 @@ class DocumentsController < ApplicationController
   end
 
   def show
-    
+    @document = Document.find(params[:id])
   end
 end
