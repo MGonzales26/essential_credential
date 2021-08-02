@@ -8,7 +8,8 @@ Essential Credential is a Ruby on Rails document management application that tra
 
 The relationships of the Locations, Clinicians and their documents.
 
-<img width="1211" alt="db schema" src="https://user-images.githubusercontent.com/62969459/127913386-1069b43f-a66f-4f11-a04f-0443f885b032.png">
+<img width="1215" alt="db schema" src="https://user-images.githubusercontent.com/62969459/127916455-bdb9527d-f3e3-4848-a641-a0e9c3dd2164.png">
+
 
 ### Prerequisites
 
