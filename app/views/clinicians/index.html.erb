@@ -6,6 +6,7 @@
       <div id="clinician-<%= clinician.id %>">
         <p> Name: <%= link_to "#{clinician.name}", clinician_path(clinician.id) %></p>
         <p> Specialty: <%= clinician.specialty %></p>
+        <p> Approved Locations:</p>
         <% clinician.locations.each do |location| %>
           <%= link_to "#{location.name}", location_path(location.id) %>
           <br>
