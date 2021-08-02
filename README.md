@@ -40,7 +40,7 @@ rails db:seed
 rails s
 ```
 
-4. In your local browser navigate to `localhost:3000`. The welcome page should be displayed. From the welcome page you can manage locations or clinicians.
+4. In your local browser navigate to `localhost:3000`. The welcome page should be displayed. From the welcome page you can navigate to your locations, clinicians, or documents.
 
 <img width="1339" alt="Welcome page" src="https://user-images.githubusercontent.com/62969459/127915338-672fba86-6c3e-4506-82ac-a37d9a08eadf.png">
 
